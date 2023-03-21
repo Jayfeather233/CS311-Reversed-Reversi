@@ -9,7 +9,6 @@ if __name__ == "__main__":
     cb[(3,4)]=-1
     cb[(4,3)]=-1
     print(cb)
-    bu = np.copy(cb)
-    cb[0][0]=1
-    cb = np.copy(bu)
-    print(cb)
+    agent.go(cb)
+    print(agent.candidate_list)
+    print(agent.do_move(cb, (3,4), -1))
